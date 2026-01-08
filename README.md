@@ -129,6 +129,33 @@ Repo: https://github.com/LaurisNeimanis/aws-eks-platform
 
 ---
 
+## GitOps Karpenter Platform — Capacity & Scheduling Layer
+**Karpenter · Kubernetes · GitOps · AWS · Platform Engineering**
+
+A production-aligned **capacity and scheduling platform** for EKS,  
+formalizing **ownership boundaries between infrastructure, platform, and workloads**.
+
+This repository defines a **platform-owned capacity and scheduling layer** where:
+- the platform owns node architecture, cost, and disruption
+- workloads express intent only (CPU / memory)
+
+It intentionally removes per-workload infrastructure coupling
+and replaces it with **explicit, GitOps-managed scheduling profiles**.
+
+**Highlights**
+- Platform-owned capacity decisions (on-demand vs spot)
+- Explicit scheduling profiles (`managed-on-demand`, `karpenter-on-demand`, `karpenter-spot`)
+- ARM64-first strategy driven by cost-efficiency and long-term sustainability,
+  implemented via architecture-aware NodePools
+- Clear separation between bootstrap/system capacity and workload capacity
+- GitOps-managed Karpenter configuration (NodePools, EC2NodeClasses)
+- Deterministic consolidation and disruption policies
+- Architecture-aligned documentation and diagrams
+
+Repo: https://github.com/LaurisNeimanis/gitops-karpenter-platform
+
+---
+
 ## AWS EKS GitOps Delivery Layer
 **Argo CD · GitOps · Kubernetes · Helm · ApplicationSets**
 
@@ -200,6 +227,8 @@ Repo: https://github.com/LaurisNeimanis/ccore-ai-demo
 
 ```
 Terraform → AWS (VPC, EKS)
+                     ↓
+        Platform Capacity & Scheduling Layer (Karpenter)
                      ↓
             Argo CD (out-of-band GitOps control plane)
                      ↓
