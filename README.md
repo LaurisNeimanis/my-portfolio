@@ -11,7 +11,10 @@ My work prioritizes:
 
 I approach infrastructure and platforms as **long-lived internal products**, not one-off deliveries.
 
-15+ years of hands-on experience across **cloud**, **hybrid cloud**, and **on-prem environments**, including AWS, Hetzner Cloud, Scaleway, and Proxmox-based infrastructure.
+15+ years of hands-on experience owning infrastructure and platforms
+across cloud, hybrid cloud, and on-prem environments,
+including AWS, Hetzner Cloud, Scaleway,
+and on-prem virtualization platforms such as Proxmox, VMware, and Citrix XenServer.
 
 ---
 
@@ -44,7 +47,7 @@ Designing infrastructure with explicit ownership, security as a baseline, and de
 - AWS VPC design, routing, subnetting, and security boundaries
 - Hybrid and multi-cloud setups (AWS + Hetzner + Scaleway)
 - Proxmox virtualization, ZFS storage, snapshot strategies
-- API-driven service architecture patterns
+- API-driven infrastructure and platform integration patterns
 - Trade-off driven architectural decision-making
 
 ---
@@ -84,7 +87,7 @@ Operating Kubernetes clusters with a focus on reliability, controlled change, an
 - Ingress controllers, service networking, RBAC
 - Helm-based delivery
 - Controlled access models and upgrades
-- Platform vs workload separation
+- Explicit platform vs workload separation with enforced ownership boundaries
 
 ---
 
@@ -145,8 +148,8 @@ and replaces it with **explicit, GitOps-managed scheduling profiles**.
 **Highlights**
 - Platform-owned capacity decisions (on-demand vs spot)
 - Explicit scheduling profiles (`managed-on-demand`, `karpenter-on-demand`, `karpenter-spot`)
-- ARM64-first strategy driven by cost-efficiency and long-term sustainability,
-  implemented via architecture-aware NodePools
+- ARM64-first capacity strategy driven by cost-efficiency and long-term sustainability,
+enforced at the platform layer via architecture-aware NodePools
 - Clear separation between bootstrap/system capacity and workload capacity
 - GitOps-managed Karpenter configuration (NodePools, EC2NodeClasses)
 - Deterministic consolidation and disruption policies
