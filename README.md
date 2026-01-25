@@ -11,7 +11,7 @@ My work prioritizes:
 
 I approach infrastructure and platforms as **long-lived internal products**, not one-off deliveries.
 
-15+ years of hands-on experience owning infrastructure and platforms
+15+ years of hands-on experience owning and operating infrastructure and platform systems
 across cloud, hybrid cloud, and on-prem environments,
 including AWS, Hetzner Cloud, Scaleway,
 and on-prem virtualization platforms such as Proxmox, VMware, and Citrix XenServer.
@@ -159,6 +159,34 @@ Repo: https://github.com/LaurisNeimanis/gitops-karpenter-platform
 
 ---
 
+## GitOps Autoscaling Platform — Policy-Driven Scaling Layer
+**Kubernetes · HPA · KEDA · Kyverno · GitOps · Platform Engineering**
+
+A production-aligned **autoscaling control plane** for Kubernetes,
+designed as a **platform-owned policy layer**, not an application concern.
+
+This repository formalizes **autoscaling as a governed platform capability**:
+- the platform owns scaling behavior, limits, and safety
+- workloads express intent only via approved profiles
+
+It explicitly separates **autoscaling policy** from:
+- infrastructure provisioning
+- capacity and scheduling decisions
+- application-level tuning
+
+**Highlights**
+- Platform-owned autoscaling profiles (HPA & KEDA)
+- Kyverno-enforced admission-time validation
+- Explicit separation between platform and workload responsibilities
+- Event-driven scaling with scale-to-zero
+- Namespace-level autoscaling enable/disable controls
+- GitOps-managed reconciliation via Argo CD
+- Designed to run **on top of an existing EKS platform** (e.g. Karpenter-based)
+
+Repo: https://github.com/LaurisNeimanis/gitops-autoscaling-platform
+
+---
+
 ## AWS EKS GitOps Delivery Layer
 **Argo CD · GitOps · Kubernetes · Helm · ApplicationSets**
 
@@ -233,6 +261,8 @@ Terraform → AWS (VPC, EKS)
                      ↓
         Platform Capacity & Scheduling Layer (Karpenter)
                      ↓
+        Autoscaling Policy Layer (HPA / KEDA / Kyverno)
+                     ↓
             Argo CD (out-of-band GitOps control plane)
                      ↓
               ApplicationSets
@@ -242,8 +272,19 @@ Terraform → AWS (VPC, EKS)
             Application Workloads
 ```
 
-This flow demonstrates a clear separation between infrastructure provisioning,
-out-of-band GitOps control, cluster-level platform management, and application delivery.
+This flow demonstrates a **layered, contract-driven platform architecture** with
+explicit ownership boundaries:
+
+- **Infrastructure provisioning** is handled by Terraform and cloud-native APIs
+- **Capacity and scheduling** are owned by the platform via Karpenter
+- **Autoscaling behavior** is enforced as a platform policy (not workload logic)
+- **GitOps control** is centralized in Argo CD as an out-of-band reconciler
+- **ApplicationSets** provide scalable, repeatable delivery patterns
+- **Platform services** are managed independently of workloads
+- **Workloads** express intent only, without owning infrastructure or scaling logic
+
+Each layer is independently evolvable, auditable, and aligned with long-lived
+platform operations.
 
 ---
 
