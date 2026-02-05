@@ -1,6 +1,6 @@
 # Lauris Neimanis — Senior Infrastructure & Platform Engineer (Cloud & Kubernetes)
 
-## AWS • Kubernetes • Terraform • GitOps • Platform Engineering • Networking • Reliability
+## AWS • Azure • Kubernetes • Terraform • GitOps • Platform Engineering • Networking • Reliability
 
 I design and operate **production-grade cloud and platform systems** with a strong focus on **operability**, **clear ownership boundaries**, and **long-term sustainability**.
 
@@ -77,7 +77,7 @@ Delivering immutable artifacts with clear promotion paths.
 - Docker Engine and Compose stacks
 - GHCR-based immutable images
 - GitHub Actions CI pipelines
-- GitOps-based CD via Argo CD
+- GitOps-based delivery via Argo CD
 
 ---
 
@@ -129,6 +129,32 @@ This repository defines the **authoritative infrastructure layer only** and inte
 - Shared, pre-bootstrapped Terraform backend (S3 + DynamoDB)
 
 Repo: https://github.com/LaurisNeimanis/aws-eks-platform
+
+---
+
+## Azure AKS Platform Infrastructure Foundation
+**Terraform · Azure · AKS · Networking · Managed Identity**
+
+A production-aligned **Azure AKS infrastructure foundation** built with the same
+platform principles as my AWS EKS foundations:
+explicit ownership boundaries, deterministic networking, and infrastructure-only scope.
+
+This repository defines the **authoritative Azure infrastructure layer only**
+(Resource Group, VNet, AKS, identity, node pools) and intentionally excludes
+GitOps, workloads, and platform services.
+
+The goal is not feature parity with EKS, but **architectural parity**:
+demonstrating cloud-agnostic platform thinking and clean infrastructure boundaries.
+
+**Highlights**
+- Explicit VNet and AKS subnet boundaries
+- AKS with VMSS-backed system node pool
+- Azure AD–integrated RBAC
+- System-assigned managed identity
+- Pre-bootstrapped Terraform backend (Azure Blob + native locking)
+- CI-enforced Terraform quality gates (fmt, lint, security, validate)
+
+Repo: https://github.com/LaurisNeimanis/azure-aks-platform
 
 ---
 
@@ -291,10 +317,12 @@ platform operations.
 # 🌐 Cloud & Platform Experience
 
 - **AWS:** VPC, EC2, S3, IAM, IGW, EKS, NLB, ACM
+- **Azure:** Resource Groups, Virtual Networks, AKS, Managed Identity, Azure CNI, Azure Load Balancer
 - **Hetzner Cloud:** networks, firewalls, IaC-driven provisioning
 - **Scaleway:** compute, managed Kubernetes
-- **On‑prem:** Proxmox, ZFS, virtualization
+- **On-prem:** Proxmox, ZFS, virtualization
 - **Networking:** routing, WireGuard-based private access, minimal attack surface
+
 
 ---
 
