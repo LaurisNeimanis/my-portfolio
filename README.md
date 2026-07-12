@@ -72,10 +72,10 @@ Reducing operational load through deterministic automation.
 ---
 
 ### Container Platforms
-Delivering immutable artifacts with clear promotion paths.
+Delivering pre-built container artifacts with clear promotion paths.
 
 - Docker Engine and Compose stacks
-- GHCR-based immutable images
+- GHCR-based pre-built images
 - GitHub Actions CI pipelines
 - GitOps-based delivery via Argo CD
 
@@ -234,7 +234,7 @@ Repo: https://github.com/LaurisNeimanis/aws-eks-gitops
 ### Kubernetes Observability Stack (GitOps)
 **Prometheus · Alertmanager · Grafana · Loki · Alloy · GitOps**
 
-A production-grade **observability platform** designed as a GitOps-managed internal product.
+A production-aligned **observability platform** designed as a GitOps-managed internal product.
 
 Focused exclusively on Kubernetes and platform reconciliation, with infrastructure treated as an external dependency.
 
@@ -268,11 +268,11 @@ Repo: https://github.com/LaurisNeimanis/ccore-ai-infra
 ### Application Architecture Demo (ccore-ai-demo)
 **FastAPI · Streamlit · Docker · GHCR · CI/CD**
 
-A backend–frontend demo showcasing immutable artifacts and clean service boundaries.
+A backend–frontend demo showcasing pre-built container artifacts and clean service boundaries.
 
 **Highlights**
 - Independent Dockerfiles per service
-- GHCR-based immutable image builds
+- GHCR-based multi-architecture image builds
 - Zero build steps in production
 - Clear separation between UI, API, and data layer
 
