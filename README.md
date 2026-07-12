@@ -48,7 +48,7 @@ Designing infrastructure with explicit ownership, security as a baseline, and de
 - Hybrid and multi-cloud setups (AWS + Hetzner + Scaleway)
 - Proxmox virtualization, ZFS storage, snapshot strategies
 - API-driven infrastructure and platform integration patterns
-- Trade-off driven architectural decision-making
+- Trade-off-driven architectural decision-making
 
 ---
 
@@ -57,7 +57,7 @@ Building reproducible and auditable infrastructure foundations.
 
 - Terraform modules and multi-environment stacks
 - Remote state, locking, and drift control
-- cloud-init based bootstrapping
+- cloud-init-based bootstrapping
 - Clear separation between one-time bootstrap and long-lived state
 
 ---
@@ -111,9 +111,9 @@ Operating platforms with feedback loops and recovery paths.
 
 ---
 
-# ⭐ Featured Projects
+## ⭐ Featured Projects
 
-## AWS EKS Platform Infrastructure Foundation
+### AWS EKS Platform Infrastructure Foundation
 **Terraform · AWS · EKS · IAM · Networking · ACM · Cloudflare**
 
 A production-aligned **AWS EKS infrastructure foundation** focused on clear ownership boundaries, deterministic networking, and API-only cluster access.
@@ -124,19 +124,19 @@ This repository defines the **authoritative infrastructure layer only** and inte
 - Explicit VPC, subnet, routing, and NAT topology
 - EKS with Managed Node Groups (Amazon Linux 2023)
 - IAM-native Kubernetes authentication (EKS Access API)
-- IRSA-based access model
+- EKS Pod Identity add-on enabled for workload identity
 - Automated ACM certificates with Cloudflare DNS validation
-- Shared, pre-bootstrapped Terraform backend (S3 + DynamoDB)
+- Shared, pre-bootstrapped Terraform backend (S3 with native locking)
 
 Repo: https://github.com/LaurisNeimanis/aws-eks-platform
 
 ---
 
-## Azure AKS Platform Infrastructure Foundation
+### Azure AKS Platform Infrastructure Foundation
 **Terraform · Azure · AKS · Networking · Managed Identity**
 
 A production-aligned **Azure AKS infrastructure foundation** built with the same
-platform principles as my AWS EKS foundations:
+platform principles as my AWS EKS foundation:
 explicit ownership boundaries, deterministic networking, and infrastructure-only scope.
 
 This repository defines the **authoritative Azure infrastructure layer only**
@@ -149,7 +149,7 @@ demonstrating cloud-agnostic platform thinking and clean infrastructure boundari
 **Highlights**
 - Explicit VNet and AKS subnet boundaries
 - AKS with VMSS-backed system node pool
-- Azure AD–integrated RBAC
+- AKS RBAC enabled
 - System-assigned managed identity
 - Pre-bootstrapped Terraform backend (Azure Blob + native locking)
 - CI-enforced Terraform quality gates (fmt, lint, security, validate)
@@ -158,7 +158,7 @@ Repo: https://github.com/LaurisNeimanis/azure-aks-platform
 
 ---
 
-## GitOps Karpenter Platform — Capacity & Scheduling Layer
+### GitOps Karpenter Platform — Capacity & Scheduling Layer
 **Karpenter · Kubernetes · GitOps · AWS · Platform Engineering**
 
 A production-aligned **capacity and scheduling platform** for EKS,  
@@ -185,7 +185,7 @@ Repo: https://github.com/LaurisNeimanis/gitops-karpenter-platform
 
 ---
 
-## GitOps Autoscaling Platform — Policy-Driven Scaling Layer
+### GitOps Autoscaling Platform — Policy-Driven Scaling Layer
 **Kubernetes · HPA · KEDA · Kyverno · GitOps · Platform Engineering**
 
 A production-aligned **autoscaling control plane** for Kubernetes,
@@ -213,7 +213,7 @@ Repo: https://github.com/LaurisNeimanis/gitops-autoscaling-platform
 
 ---
 
-## AWS EKS GitOps Delivery Layer
+### AWS EKS GitOps Delivery Layer
 **Argo CD · GitOps · Kubernetes · Helm · ApplicationSets**
 
 A production-grade **GitOps delivery layer** managing everything **above the infrastructure boundary**.
@@ -231,7 +231,7 @@ Repo: https://github.com/LaurisNeimanis/aws-eks-gitops
 
 ---
 
-## Kubernetes Observability Stack (GitOps)
+### Kubernetes Observability Stack (GitOps)
 **Prometheus · Alertmanager · Grafana · Loki · Alloy · GitOps**
 
 A production-grade **observability platform** designed as a GitOps-managed internal product.
@@ -249,14 +249,14 @@ Repo: https://github.com/LaurisNeimanis/gitops-observability-stack
 
 ---
 
-## Infrastructure Automation Stack (ccore-ai-infra)
+### Infrastructure Automation Stack (ccore-ai-infra)
 **Terraform · Ansible · AWS · cloud-init · Docker**
 
 An end-to-end **infrastructure automation stack** demonstrating full lifecycle ownership from provisioning to application runtime.
 
 **Highlights**
 - Modular Terraform with clear environment separation
-- cloud-init based bootstrapping
+- cloud-init-based bootstrapping
 - Auto-generated Ansible inventory
 - Idempotent Ansible roles
 - Zero-manual provisioning workflow
@@ -265,7 +265,7 @@ Repo: https://github.com/LaurisNeimanis/ccore-ai-infra
 
 ---
 
-## Application Architecture Demo (ccore-ai-demo)
+### Application Architecture Demo (ccore-ai-demo)
 **FastAPI · Streamlit · Docker · GHCR · CI/CD**
 
 A backend–frontend demo showcasing immutable artifacts and clean service boundaries.
@@ -280,7 +280,7 @@ Repo: https://github.com/LaurisNeimanis/ccore-ai-demo
 
 ---
 
-# 🌿 Kubernetes Platform & GitOps Flow
+## 🌿 Kubernetes Platform & GitOps Flow
 
 ```
 Terraform → AWS (VPC, EKS)
@@ -314,7 +314,7 @@ platform operations.
 
 ---
 
-# 🌐 Cloud & Platform Experience
+## 🌐 Cloud & Platform Experience
 
 - **AWS:** VPC, EC2, S3, IAM, IGW, EKS, NLB, ACM
 - **Azure:** Resource Groups, Virtual Networks, AKS, Managed Identity, Azure CNI, Azure Load Balancer
@@ -326,7 +326,7 @@ platform operations.
 
 ---
 
-# 🧠 Current Focus Areas
+## 🧠 Current Focus Areas
 
 - Scaling GitOps platforms across teams and environments (Argo CD, ApplicationSets)
 - Defining platform standards and self-service boundaries without sacrificing operational control
@@ -336,8 +336,8 @@ platform operations.
 
 ---
 
-# 📌 Contact
+## 📌 Contact
 
 **LinkedIn:** https://www.linkedin.com/in/lauris-neimanis  
-**Email:** neimanis.laur@gmail.com  
+**Email:** neimanis.lauris@gmail.com  
 **Location:** Latvia
