@@ -1,343 +1,316 @@
-# Lauris Neimanis — Senior Infrastructure & Platform Engineer (Cloud & Kubernetes)
+# Lauris Neimanis — Senior DevOps & Platform Engineer
 
-## AWS • Azure • Kubernetes • Terraform • GitOps • Platform Engineering • Networking • Reliability
+**AWS Certified Solutions Architect – Associate · Terraform/Terragrunt · AWS · ECS · Kubernetes · GitOps · Ansible · Linux · Observability**
 
-I design and operate **production-grade cloud and platform systems** with a strong focus on **operability**, **clear ownership boundaries**, and **long-term sustainability**.
+I design, modernize, automate, and operate business-critical infrastructure across AWS, hybrid cloud, and on-premises environments.
 
-My work prioritizes:
-- architectural clarity over clever abstractions
-- automation over manual intervention
-- systems that remain understandable as teams, environments, and workloads scale
+My strongest value is long-term infrastructure ownership: taking systems from manual or inconsistent operations toward clear architecture, repeatable delivery, reliable observability, controlled change, and maintainable platform standards.
 
-I approach infrastructure and platforms as **long-lived internal products**, not one-off deliveries.
-
-15+ years of hands-on experience owning and operating infrastructure and platform systems
-across cloud, hybrid cloud, and on-prem environments,
-including AWS, Hetzner Cloud, Scaleway,
-and on-prem virtualization platforms such as Proxmox, VMware, and Citrix XenServer.
+I have **16+ years of hands-on experience** across production infrastructure, B2B consulting, public-sector systems, and product-company environments.
 
 ---
 
-## 🧠 Architectural Approach
+## Target Roles
 
-I regularly operate at a scope that spans multiple teams, environments, and long-lived platforms.
+The strongest fit is a senior role where infrastructure reliability, platform ownership, and pragmatic modernization matter:
 
-I design systems to survive **growth, failure, and team turnover**.
-
-### Core principles
-- Explicit, boring architectures over hidden complexity
-- Early separation of concerns to avoid accidental coupling
-- Predictable failure modes and recovery paths
-- Opinionated defaults before optional flexibility
-- Git as the single source of truth
-- Infrastructure and platforms treated as internal products with contracts
-
-### Non-goals
-- Novelty for novelty’s sake
-- Tight coupling between infrastructure and delivery layers
-- Platforms that hide failure modes instead of exposing them
+- Senior DevOps Engineer
+- Senior Platform Engineer
+- Infrastructure Architect
+- Cloud Infrastructure Engineer
+- SRE-oriented Infrastructure / Platform role
 
 ---
 
-## 🔥 Core Capabilities
+## Certification
 
-### Infrastructure Architecture
-Designing infrastructure with explicit ownership, security as a baseline, and deterministic behavior.
-
-- AWS VPC design, routing, subnetting, and security boundaries
-- Hybrid and multi-cloud setups (AWS + Hetzner + Scaleway)
-- Proxmox virtualization, ZFS storage, snapshot strategies
-- API-driven infrastructure and platform integration patterns
-- Trade-off-driven architectural decision-making
+- **AWS Certified Solutions Architect – Associate** — [verify on Credly](https://www.credly.com/badges/d82e5b66-b13b-4a82-a258-4be92cd811f8)
 
 ---
 
-### Infrastructure as Code
-Building reproducible and auditable infrastructure foundations.
+## Production Engineering Experience
 
-- Terraform modules and multi-environment stacks
-- Remote state, locking, and drift control
-- cloud-init-based bootstrapping
-- Clear separation between one-time bootstrap and long-lived state
+My production engineering experience includes:
 
----
+- AWS and hybrid infrastructure ownership across long-lived environments
+- Terraform modules and Terragrunt environment composition
+- ECS Fargate and ECS-on-EC2 application platforms
+- Reusable web, worker, scheduled-task, and multi-container delivery patterns
+- CI/CD, controlled releases, rollback, and environment-isolated review workflows
+- Ansible, Bash, Python, and Linux automation
+- Metrics, logs, dashboards, alerting, and operational feedback loops
+- Managed databases, queues, cache, shared storage, object storage, and supporting platform services
+- Regulated-environment infrastructure controls: segmentation, logging, hardening, recovery, and audit readiness
+- Production troubleshooting, root cause analysis, incident response, backup, restore, and disaster recovery
+- Staged modernization from standardized Docker/ECS delivery toward Kubernetes where it is operationally justified
 
-### Configuration & Automation
-Reducing operational load through deterministic automation.
-
-- Ansible roles for Docker, networking, and platform services
-- Zero-manual provisioning workflows
-- Idempotent, modular automation patterns
-
----
-
-### Container Platforms
-Delivering pre-built container artifacts with clear promotion paths.
-
-- Docker Engine and Compose stacks
-- GHCR-based pre-built images
-- GitHub Actions CI pipelines
-- GitOps-based delivery via Argo CD
+My container-platform experience spans both **ECS and Kubernetes**, including production Kubernetes and Helm operations together with hands-on EKS and AKS platform engineering.
 
 ---
 
-### Kubernetes
-Operating Kubernetes clusters with a focus on reliability, controlled change, and operational clarity.
+## What I Bring
 
-- Ingress controllers, service networking, RBAC
-- Helm-based delivery
-- Controlled access models and upgrades
-- Explicit platform vs workload separation with enforced ownership boundaries
-
----
-
-### Networking & Security
-Designing secure-by-default network models.
-
-- VPCs, routing, firewalls
-- WireGuard-based private access
-- Least-privilege access boundaries
-- Hardened Linux baselines
+- **Production ownership:** I understand uptime, recovery, incidents, audits, and operational consequences, not only build pipelines.
+- **Platform thinking:** I separate infrastructure, platform services, delivery workflows, and workloads into clear ownership boundaries.
+- **Pragmatic modernization:** I prefer staged, reversible improvements over large rewrites that create operational risk.
+- **Infrastructure as Code discipline:** I care about state, locking, module boundaries, dependency drift, CI validation, and long-term maintainability.
+- **Reliability focus:** I treat observability, backups, access control, and failure modes as design inputs, not afterthoughts.
+- **Strong Linux and networking base:** I am comfortable below the abstraction layer when debugging production systems.
 
 ---
 
-### Reliability & Observability
-Operating platforms with feedback loops and recovery paths.
+## Public Reference Work
 
-- Metrics, logs, dashboards, and alerting
-- Metrics-driven debugging
-- Backup and restore strategies
-- High-ownership incident handling
+The repositories below are public reference implementations. They are intentionally scoped to demonstrate architecture, ownership boundaries, delivery patterns, and operational reasoning without exposing non-public production systems.
+
+| Project | What it demonstrates | Technologies |
+|---|---|---|
+| [AWS EKS Platform](https://github.com/LaurisNeimanis/aws-eks-platform) | AWS infrastructure foundation for EKS | Terraform, EKS, VPC, IAM, ACM |
+| [AWS EKS GitOps](https://github.com/LaurisNeimanis/aws-eks-gitops) | Platform and workload delivery above the cluster boundary | Argo CD, ApplicationSets, Helm, Kustomize |
+| [Karpenter Platform](https://github.com/LaurisNeimanis/gitops-karpenter-platform) | Platform-owned capacity, scheduling, cost, and disruption model | Karpenter, Spot/On-Demand, ARM64, GitOps |
+| [Autoscaling Platform](https://github.com/LaurisNeimanis/gitops-autoscaling-platform) | Governed workload scaling as platform policy | HPA, KEDA, Kyverno, Argo CD |
+| [Observability Stack](https://github.com/LaurisNeimanis/gitops-observability-stack) | GitOps-managed metrics, logs, dashboards, and alerting | Prometheus, Alertmanager, Grafana, Loki, Alloy |
+| [Azure AKS Platform](https://github.com/LaurisNeimanis/azure-aks-platform) | Azure infrastructure foundation using the same platform principles | Terraform, AKS, VNet, Managed Identity |
+| [Infrastructure Automation](https://github.com/LaurisNeimanis/ccore-ai-infra) | End-to-end AWS provisioning and server bootstrap reference stack | Terraform, Ansible, cloud-init, Docker |
+| [Application Demo](https://github.com/LaurisNeimanis/ccore-ai-demo) | Small app used to validate delivery and infrastructure automation | FastAPI, Streamlit, Docker, GHCR |
+
+Supporting repositories:
+
+| Repository | Purpose | Technologies |
+|---|---|---|
+| [AWS Terraform Backend Bootstrap](https://github.com/LaurisNeimanis/aws-tf-backend-bootstrap) | Shared S3 remote-state backend bootstrap with native locking | Terraform, AWS S3 |
+| [Azure Terraform Backend Bootstrap](https://github.com/LaurisNeimanis/azure-tf-backend-bootstrap) | Azure Blob remote-state backend bootstrap with native locking | Terraform, Azure Storage |
 
 ---
 
-## ⭐ Featured Projects
+## Platform Architecture Model
 
-### AWS EKS Platform Infrastructure Foundation
+```text
+Terraform infrastructure
+        ↓
+Kubernetes cluster foundation
+        ↓
+Capacity and scheduling layer
+        ↓
+Autoscaling and policy layer
+        ↓
+GitOps reconciliation
+        ↓
+Platform services
+        ↓
+Application workloads
+```
+
+The model is intentionally layered:
+
+- **Infrastructure** is provisioned with Terraform and cloud-native APIs.
+- **Capacity and scheduling** are owned by the platform, not individual applications.
+- **Autoscaling behavior** is governed as policy through approved profiles.
+- **GitOps reconciliation** provides controlled, reviewable desired-state changes.
+- **Platform services** are managed independently from application workloads.
+- **Workloads** express runtime intent without owning infrastructure details.
+
+This is the same operating principle I use in production work: define clear contracts between layers so systems remain understandable, auditable, and maintainable as they grow.
+
+---
+
+## Selected Project Details
+
+### AWS EKS Platform
+
 **Terraform · AWS · EKS · IAM · Networking · ACM · Cloudflare**
 
-A production-aligned **AWS EKS infrastructure foundation** focused on clear ownership boundaries, deterministic networking, and API-only cluster access.
+A production-aligned AWS EKS infrastructure foundation focused on deterministic networking, controlled cluster access, and clear infrastructure/platform/workload boundaries.
 
-This repository defines the **authoritative infrastructure layer only** and intentionally excludes platform services and workloads.
+Highlights:
 
-**Highlights**
-- Explicit VPC, subnet, routing, and NAT topology
-- EKS with Managed Node Groups (Amazon Linux 2023)
-- IAM-native Kubernetes authentication (EKS Access API)
-- EKS Pod Identity add-on enabled for workload identity
-- Automated ACM certificates with Cloudflare DNS validation
-- Shared, pre-bootstrapped Terraform backend (S3 with native locking)
+- Explicit VPC, subnet, routing, NAT, and security topology
+- EKS Managed Node Groups using Amazon Linux 2023
+- IAM-native Kubernetes access through the EKS Access API
+- EKS Pod Identity add-on for workload identity
+- ACM certificate automation with Cloudflare DNS validation
+- Shared S3 Terraform backend with native locking
+- Infrastructure-only scope; GitOps and workloads are managed separately
 
-Repo: https://github.com/LaurisNeimanis/aws-eks-platform
+Repository: <https://github.com/LaurisNeimanis/aws-eks-platform>
 
----
+### AWS EKS GitOps
 
-### Azure AKS Platform Infrastructure Foundation
-**Terraform · Azure · AKS · Networking · Managed Identity**
+**Argo CD · GitOps · Kubernetes · Helm · Kustomize · ApplicationSets**
 
-A production-aligned **Azure AKS infrastructure foundation** built with the same
-platform principles as my AWS EKS foundation:
-explicit ownership boundaries, deterministic networking, and infrastructure-only scope.
+A production-aligned GitOps delivery layer for platform services and workloads above an existing EKS infrastructure boundary.
 
-This repository defines the **authoritative Azure infrastructure layer only**
-(Resource Group, VNet, AKS, identity, node pools) and intentionally excludes
-GitOps, workloads, and platform services.
+Highlights:
 
-The goal is not feature parity with EKS, but **architectural parity**:
-demonstrating cloud-agnostic platform thinking and clean infrastructure boundaries.
-
-**Highlights**
-- Explicit VNet and AKS subnet boundaries
-- AKS with VMSS-backed system node pool
-- AKS RBAC enabled
-- System-assigned managed identity
-- Pre-bootstrapped Terraform backend (Azure Blob + native locking)
-- CI-enforced Terraform quality gates (fmt, lint, security, validate)
-
-Repo: https://github.com/LaurisNeimanis/azure-aks-platform
-
----
-
-### GitOps Karpenter Platform — Capacity & Scheduling Layer
-**Karpenter · Kubernetes · GitOps · AWS · Platform Engineering**
-
-A production-aligned **capacity and scheduling platform** for EKS,  
-formalizing **ownership boundaries between infrastructure, platform, and workloads**.
-
-This repository defines a **platform-owned capacity and scheduling layer** where:
-- the platform owns node architecture, cost, and disruption
-- workloads express intent only (CPU / memory)
-
-It intentionally removes per-workload infrastructure coupling
-and replaces it with **explicit, GitOps-managed scheduling profiles**.
-
-**Highlights**
-- Platform-owned capacity decisions (on-demand vs spot)
-- Explicit scheduling profiles (`managed-on-demand`, `karpenter-on-demand`, `karpenter-spot`)
-- ARM64-first capacity strategy driven by cost-efficiency and long-term sustainability,
-enforced at the platform layer via architecture-aware NodePools
-- Clear separation between bootstrap/system capacity and workload capacity
-- GitOps-managed Karpenter configuration (NodePools, EC2NodeClasses)
-- Deterministic consolidation and disruption policies
-- Architecture-aligned documentation and diagrams
-
-Repo: https://github.com/LaurisNeimanis/gitops-karpenter-platform
-
----
-
-### GitOps Autoscaling Platform — Policy-Driven Scaling Layer
-**Kubernetes · HPA · KEDA · Kyverno · GitOps · Platform Engineering**
-
-A production-aligned **autoscaling control plane** for Kubernetes,
-designed as a **platform-owned policy layer**, not an application concern.
-
-This repository formalizes **autoscaling as a governed platform capability**:
-- the platform owns scaling behavior, limits, and safety
-- workloads express intent only via approved profiles
-
-It explicitly separates **autoscaling policy** from:
-- infrastructure provisioning
-- capacity and scheduling decisions
-- application-level tuning
-
-**Highlights**
-- Platform-owned autoscaling profiles (HPA & KEDA)
-- Kyverno-enforced admission-time validation
-- Explicit separation between platform and workload responsibilities
-- Event-driven scaling with scale-to-zero
-- Namespace-level autoscaling enable/disable controls
-- GitOps-managed reconciliation via Argo CD
-- Designed to run **on top of an existing EKS platform** (e.g. Karpenter-based)
-
-Repo: https://github.com/LaurisNeimanis/gitops-autoscaling-platform
-
----
-
-### AWS EKS GitOps Delivery Layer
-**Argo CD · GitOps · Kubernetes · Helm · ApplicationSets**
-
-A production-grade **GitOps delivery layer** managing everything **above the infrastructure boundary**.
-
-Designed for safe change management, scalability across teams, and long-lived platform operation.
-
-**Highlights**
 - Out-of-band Argo CD control plane
 - App-of-Apps bootstrap pattern
-- ApplicationSets for scalable onboarding
+- ApplicationSets for repeatable onboarding
+- Helm and Kustomize-based delivery
 - Clear separation between platform services and workloads
-- Git as the single source of truth
+- Git as the source of truth for desired Kubernetes state
 
-Repo: https://github.com/LaurisNeimanis/aws-eks-gitops
+Repository: <https://github.com/LaurisNeimanis/aws-eks-gitops>
 
----
+### Karpenter Platform
 
-### Kubernetes Observability Stack (GitOps)
-**Prometheus · Alertmanager · Grafana · Loki · Alloy · GitOps**
+**Karpenter · Kubernetes · GitOps · AWS · Platform Engineering**
 
-A production-aligned **observability platform** designed as a GitOps-managed internal product.
+A platform-owned capacity and scheduling layer for EKS. The platform owns node architecture, cost, capacity type, consolidation, and disruption; workloads express resource requirements without controlling infrastructure details.
 
-Focused exclusively on Kubernetes and platform reconciliation, with infrastructure treated as an external dependency.
+Highlights:
 
-**Highlights**
-- Prometheus Operator with explicit CRD lifecycle management
-- Alertmanager routing with noise suppression and separation of concerns
-- Loki single-binary setup with object storage
-- Grafana Alloy for unified log collection
-- Fully GitOps-managed via Argo CD
+- Explicit scheduling profiles for managed, on-demand, and Spot capacity
+- ARM64-first capacity strategy
+- Separation between bootstrap/system capacity and workload capacity
+- GitOps-managed NodePools and EC2NodeClasses
+- Deterministic consolidation and disruption policies
+- Documented platform and workload ownership boundaries
 
-Repo: https://github.com/LaurisNeimanis/gitops-observability-stack
+Repository: <https://github.com/LaurisNeimanis/gitops-karpenter-platform>
 
----
+### Autoscaling Platform
 
-### Infrastructure Automation Stack (ccore-ai-infra)
-**Terraform · Ansible · AWS · cloud-init · Docker**
+**Kubernetes · HPA · KEDA · Kyverno · GitOps**
 
-An end-to-end **infrastructure automation stack** demonstrating full lifecycle ownership from provisioning to application runtime.
+A governed autoscaling policy layer where workloads select approved scaling profiles while the platform owns limits, validation, and safety.
 
-**Highlights**
-- Modular Terraform with clear environment separation
-- cloud-init-based bootstrapping
-- Auto-generated Ansible inventory
-- Idempotent Ansible roles
-- Zero-manual provisioning workflow
+Highlights:
 
-Repo: https://github.com/LaurisNeimanis/ccore-ai-infra
+- Platform-owned HPA and KEDA profiles
+- Event-driven scaling and scale-to-zero patterns
+- Kyverno admission-time validation
+- Namespace-level enablement controls
+- Clear separation of autoscaling, capacity, and application concerns
+- Argo CD-managed reconciliation
 
----
+Repository: <https://github.com/LaurisNeimanis/gitops-autoscaling-platform>
 
-### Application Architecture Demo (ccore-ai-demo)
+### Observability Stack
+
+**Prometheus · Alertmanager · Grafana · Loki · Alloy · Argo CD**
+
+A GitOps-managed Kubernetes observability platform focused on metrics, logs, dashboards, alerting, and operational feedback loops.
+
+Highlights:
+
+- Prometheus Operator with controlled CRD lifecycle
+- Alertmanager routing and noise reduction
+- Loki with object storage
+- Grafana dashboards and data sources
+- Grafana Alloy for log collection
+- Argo CD-managed desired state
+
+Repository: <https://github.com/LaurisNeimanis/gitops-observability-stack>
+
+### Azure AKS Platform
+
+**Terraform · Azure · AKS · Networking · Managed Identity**
+
+A production-aware AKS infrastructure foundation built around the same ownership and lifecycle principles as the AWS EKS implementation.
+
+Highlights:
+
+- Explicit Resource Group, VNet, and AKS subnet boundaries
+- AKS with a VMSS-backed system node pool
+- Kubernetes RBAC
+- System-assigned managed identity
+- Azure Blob Terraform backend with native locking
+- CI-enforced formatting, linting, validation, and security checks
+- Infrastructure-only scope with GitOps and workloads managed separately
+
+Repository: <https://github.com/LaurisNeimanis/azure-aks-platform>
+
+### Infrastructure Automation Stack
+
+**Terraform · Ansible · AWS · cloud-init · Docker · CI/CD**
+
+A production-inspired reference stack showing provisioning, bootstrap, configuration, and application runtime automation in one repository.
+
+Highlights:
+
+- Modular Terraform with explicit environment separation
+- cloud-init-based bootstrap
+- Automatically generated Ansible inventory
+- Idempotent Ansible roles and templates
+- Docker-based application runtime
+- CI validation for Terraform and Ansible
+
+Repository: <https://github.com/LaurisNeimanis/ccore-ai-infra>
+
+### Application Demo
+
 **FastAPI · Streamlit · Docker · GHCR · CI/CD**
 
-A backend–frontend demo showcasing pre-built container artifacts and clean service boundaries.
+A small backend/frontend demo used to validate container builds, GHCR publishing, and infrastructure deployment workflows.
 
-**Highlights**
-- Independent Dockerfiles per service
+Highlights:
+
+- Independent Dockerfiles for API and UI services
 - GHCR-based multi-architecture image builds
-- Zero build steps in production
-- Clear separation between UI, API, and data layer
+- Pre-built images pulled by infrastructure automation
+- Clear separation between UI, API, and data concerns
 
-Repo: https://github.com/LaurisNeimanis/ccore-ai-demo
-
----
-
-## 🌿 Kubernetes Platform & GitOps Flow
-
-```
-Terraform → AWS (VPC, EKS)
-                     ↓
-        Platform Capacity & Scheduling Layer (Karpenter)
-                     ↓
-        Autoscaling Policy Layer (HPA / KEDA / Kyverno)
-                     ↓
-            Argo CD (out-of-band GitOps control plane)
-                     ↓
-              ApplicationSets
-                     ↓
-        Platform Services (Ingress, DNS, Observability)
-                     ↓
-            Application Workloads
-```
-
-This flow demonstrates a **layered, contract-driven platform architecture** with
-explicit ownership boundaries:
-
-- **Infrastructure provisioning** is handled by Terraform and cloud-native APIs
-- **Capacity and scheduling** are owned by the platform via Karpenter
-- **Autoscaling behavior** is enforced as a platform policy (not workload logic)
-- **GitOps control** is centralized in Argo CD as an out-of-band reconciler
-- **ApplicationSets** provide scalable, repeatable delivery patterns
-- **Platform services** are managed independently of workloads
-- **Workloads** express intent only, without owning infrastructure or scaling logic
-
-Each layer is independently evolvable, auditable, and aligned with long-lived
-platform operations.
+Repository: <https://github.com/LaurisNeimanis/ccore-ai-demo>
 
 ---
 
-## 🌐 Cloud & Platform Experience
+## Core Technical Areas
 
-- **AWS:** VPC, EC2, S3, IAM, IGW, EKS, NLB, ACM
-- **Azure:** Resource Groups, Virtual Networks, AKS, Managed Identity, Azure CNI, Azure Load Balancer
-- **Hetzner Cloud:** networks, firewalls, IaC-driven provisioning
-- **Scaleway:** compute, managed Kubernetes
-- **On-prem:** Proxmox, ZFS, virtualization
-- **Networking:** routing, WireGuard-based private access, minimal attack surface
+### Infrastructure and Cloud
 
+- AWS VPC, EC2, ECS, EKS, ECR, IAM, RDS/Aurora, ElastiCache/Redis, S3, EFS, SQS, SNS, CloudWatch, ACM, load balancing
+- Azure Resource Groups, Virtual Networks, AKS, Managed Identity, Azure CNI, Azure Load Balancer
+- Hetzner Cloud and Scaleway infrastructure
+- Proxmox, VMware, Citrix XenServer, ZFS, storage, networking, and virtualization
+
+### Infrastructure as Code
+
+- Terraform modules and multi-environment stacks
+- Terragrunt composition and dependency management
+- Remote state, locking, imports, refactoring, drift control, and provider lock discipline
+- CI validation for formatting, linting, security checks, and validation
+- Separation between bootstrap infrastructure and long-lived state
+
+### Delivery and Automation
+
+- GitLab CI/CD, GitHub Actions, and review-driven release workflows
+- Ansible roles, inventories, templates, and idempotent workflows
+- cloud-init bootstrapping
+- Bash and Python automation
+- Docker, Docker Compose, ECR, GHCR, and image delivery workflows
+
+### Kubernetes and Platform Engineering
+
+- Kubernetes, Helm, EKS, AKS, Argo CD, ApplicationSets, and Kustomize
+- Platform/workload ownership boundaries
+- Karpenter capacity management
+- HPA, KEDA, and policy-driven autoscaling
+- RBAC, workload identity, admission policies, and GitOps reconciliation
+
+### Reliability, Security, and Operations
+
+- Metrics, logs, dashboards, alerting, and incident investigation
+- Prometheus, Grafana, Loki, Alloy, CloudWatch, and related observability tooling
+- Root cause analysis and preventive engineering
+- Backup, restore, disaster recovery, and recovery planning
+- Network segmentation, least-privilege access, hardened Linux baselines, and regulated-environment infrastructure controls
 
 ---
 
-## 🧠 Current Focus Areas
+## Engineering Principles
 
-- Scaling GitOps platforms across teams and environments (Argo CD, ApplicationSets)
-- Defining platform standards and self-service boundaries without sacrificing operational control
-- Terraform workflows for multi-environment and multi-team organizations
-- Observability as a decision-support system, not just monitoring
-- SRE-oriented automation focused on failure reduction, recovery, and operability
+- Prefer explicit, understandable systems over clever abstractions.
+- Keep infrastructure, platform, delivery, and workload concerns separate.
+- Design for predictable failure modes and practical recovery paths.
+- Use automation to reduce operational risk, not to hide complexity.
+- Pin dependencies and validate drift where reproducibility matters.
+- Treat observability as a decision-support system, not only monitoring.
+- Optimize for systems that remain maintainable after the original builder leaves.
 
 ---
 
-## 📌 Contact
+## Contact
 
-**LinkedIn:** https://www.linkedin.com/in/lauris-neimanis  
-**Email:** neimanis.lauris@gmail.com  
-**Location:** Latvia
+- **LinkedIn:** <https://www.linkedin.com/in/lauris-neimanis>
+- **Email:** neimanis.lauris@gmail.com
+- **Location:** Latvia
